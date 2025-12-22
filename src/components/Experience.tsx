@@ -29,7 +29,7 @@ export default function Experience() {
           </h2>
 
                     <p className="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed max-w-3xl mx-auto">
-            Step into a glowing winter wonderland in Mesa! Twinkling lights, tiny houses, festive displays, a stunning 30-foot illuminated tree, and a festive atmosphere for kids and adults alike.
+            Step into a glowing winter wonderland in Mesa! Twinkling lights, tiny houses, festive displays and a stunning 30-foot illuminated tree. A festive atmosphere for kids and adults alike.
           </p>
 
           <div className="h-1 w-24 bg-gradient-to-r from-red-500 to-green-500 mx-auto mb-12 rounded-full"></div>
