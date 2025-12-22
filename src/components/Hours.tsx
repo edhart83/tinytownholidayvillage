@@ -31,7 +31,7 @@ export default function Hours() {
               <div>
                 <h3 className="text-xl font-bold text-yellow-300 mb-3">Important Notice</h3>
                 <p className="text-gray-200 leading-relaxed text-lg">
-                  Tiny Town will temporarily close at the end of January to prepare for an exciting and refreshed 2025 season — visit us now while it's glowing!
+                  Tiny Town will temporarily close at the end of January to prepare for an exciting and refreshed 2026 season! Visit us now while it's glowing!
                 </p>
               </div>
             </div>

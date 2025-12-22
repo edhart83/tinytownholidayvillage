@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-    'holiday': ['Mountains of Christmas', 'serif']
+    'holiday': ['Mountains of Christmas', 'serif'],
+    'winter-selfie': ['Winter Selfie', 'serif']
       },
     },
   },

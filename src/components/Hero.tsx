@@ -37,11 +37,11 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl md:text-9xl lg:text-9xl font-bold text-white mb-6 drop-shadow-[0_0_10px_#38bdf8] leading-tight font-holiday">
+          <h1 className="text-6xl md:text-9xl lg:text-9xl font-bold text-white mb-6 drop-shadow-[0_0_10px_#38bdf8] leading-tight font-winter-selfie">
             TINY TOWN HOLIDAY VILLAGE
           </h1>
 
-          <h1 className="text-4xl md:text-6xl lg:text-4xl font-normal text-white mb-12 text-shadow-glow leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-4xl font-normal text-white mb-12 text-shadow-glow leading-tight font-winter-selfie">
             A Magical Holiday Experience for All Ages
           </h1>
 
