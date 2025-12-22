@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import About from '../components/About';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Home } from 'lucide-react';
 
 function AboutPage() {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Navigation back to home */}

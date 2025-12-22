@@ -33,7 +33,7 @@ export default function About() {
           </div>
 
           {/* Image Gallery - Early Days */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <img
                 key={num}
@@ -85,7 +85,7 @@ export default function About() {
                 So we went to work. Throughout November 2024, we scoured the area for every little playhouse we could find and designed a layout. We laid out the houses to look like an old west town, but didn't like the dirt. We spaced out the houses differently, thought it would look better with fake black top instead of dirt, played with spacing and fence. The 30ft tree began to shape up. We were still working on spacing, trying to design a forced perspective.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {[7, 8, 9, 10, 11, 12, 13, 14].map((num) => (
                 <img
                   key={num}
@@ -192,7 +192,7 @@ export default function About() {
                 </li>
               </ul>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
               {[15, 16, 17, 18, 19, 20, 21, 22, 23].map((num) => (
                 <img
                   key={num}
@@ -391,7 +391,7 @@ export default function About() {
           </div>
 
           {/* Final Images */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[24, 25, 26, 27, 28, 29].map((num) => (
               <img
                 key={num}
