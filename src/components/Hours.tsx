@@ -20,8 +20,8 @@ export default function Hours() {
 
             <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm p-8 rounded-2xl border border-green-500/30 text-center">
               <Calendar className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Season</h3>
-              <p className="text-2xl font-bold text-yellow-300">Now Open Through January</p>
+              <h3 className="text-2xl font-bold text-white mb-2">Opening Day</h3>
+              <p className="text-2xl font-bold text-yellow-300">December 1st, 2026</p>
             </div>
           </div>
 
@@ -31,7 +31,7 @@ export default function Hours() {
               <div>
                 <h3 className="text-xl font-bold text-yellow-300 mb-3">Important Notice</h3>
                 <p className="text-gray-200 leading-relaxed text-lg">
-                  Tiny Town will temporarily close at the end of January to prepare for an exciting and refreshed 2026 season! Visit us now while it's glowing!
+                  Tiny Town is currently closed. We open for the 2026 season on <strong>December 1st, 2026 at 5:00 PM</strong>. We can't wait to see you there!
                 </p>
               </div>
             </div>

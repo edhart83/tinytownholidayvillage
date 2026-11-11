@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: 'When are you open?',
-    answer: 'Nightly from 5 PM to 11 PM during the season.',
+    answer: 'We open for the 2026 season on December 1st, 2026 at 5 PM. Nightly from 5 PM to 11 PM during the season.',
   },
   {
     question: 'Do I need an RSVP?',

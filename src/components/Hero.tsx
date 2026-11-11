@@ -69,7 +69,7 @@ export default function Hero() {
            <div className="inline-block px-6 py-2 bg-yellow-400/20 backdrop-blur-sm border-2 border-yellow-400 rounded-full">
             <p className="text-yellow-300 font-semibold flex items-center gap-2 justify-center">
               <Clock className="w-4 h-4" />
-              Open Nightly 5 PM – 11 PM
+              Opening Night: December 1st, 2026 at 5 PM
             </p>
           </div>
 
