@@ -1,4 +1,4 @@
-import { Film, Users, MessageCircle, Facebook } from 'lucide-react';
+import { Film, Users, Facebook } from 'lucide-react';
 
 interface EventsProps {
   facebookUrl?: string;
@@ -36,18 +36,6 @@ export default function Events({ facebookUrl = "https://facebook.com" }: EventsP
               </div>
             </div>
 
-            <div className="bg-yellow-900/30 border border-yellow-500/50 rounded-xl p-6 mb-6">
-              <p className="text-lg font-semibold text-yellow-300 mb-3 flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                Text to RSVP
-              </p>
-              <a
-                href="tel:480-274-3831"
-                className="text-2xl font-bold text-white hover:text-yellow-300 transition-colors"
-              >
-                480-274-3831
-              </a>
-            </div>
 
             <div className="flex items-start gap-3 text-gray-300">
               <Facebook className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />

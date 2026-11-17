@@ -1,4 +1,4 @@
-import { MapPin, MessageCircle, Clock } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 export default function Hero() {
@@ -57,13 +57,6 @@ export default function Hero() {
               Get Directions
             </a>
 
-            <a
-              href="tel:480-274-3831"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Text to RSVP
-            </a>
           </div>
 
            <div className="inline-block px-6 py-2 bg-yellow-400/20 backdrop-blur-sm border-2 border-yellow-400 rounded-full">

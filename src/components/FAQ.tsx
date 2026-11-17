@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'Do I need an RSVP?',
-    answer: "General visits don't require RSVP, but special events may have limited seating. Text us to RSVP for events.",
+    answer: "General visits don't require RSVP, but special events may have limited seating. Follow us on Facebook for event announcements.",
   },
 ];
 

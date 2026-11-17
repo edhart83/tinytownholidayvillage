@@ -1,4 +1,4 @@
-import { MapPin, MessageCircle, Facebook, Navigation } from 'lucide-react';
+import { MapPin, Facebook, Navigation } from 'lucide-react';
 
 interface ContactProps {
   facebookUrl?: string;
@@ -17,18 +17,7 @@ export default function Contact({ facebookUrl = "https://www.facebook.com/profil
 
           <div className="h-1 w-24 bg-gradient-to-r from-red-500 to-green-500 mx-auto mb-12 rounded-full"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm rounded-2xl border border-green-500/30 p-8 text-center">
-              <MessageCircle className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Text to RSVP</h3>
-              <a
-                href="tel:480-274-3831"
-                className="text-2xl font-bold text-yellow-300 hover:text-yellow-200 transition-colors"
-              >
-                480-274-3831
-              </a>
-            </div>
-
+          <div className="grid md:grid-cols-1 gap-8 mb-12 max-w-sm mx-auto">
             <div className="bg-gradient-to-br from-red-900/40 to-red-800/40 backdrop-blur-sm rounded-2xl border border-red-500/30 p-8 text-center">
               <MapPin className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Location</h3>
