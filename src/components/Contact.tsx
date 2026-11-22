@@ -39,6 +39,13 @@ export default function Contact({ facebookUrl = "https://www.facebook.com/profil
             </a>
 
             <a
+              href="/about"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+            >
+              Learn More
+            </a>
+
+            <a
               href={facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
