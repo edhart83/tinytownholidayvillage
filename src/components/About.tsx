@@ -1,8 +1,48 @@
-import { Heart, Home, TreePine, Train, Lightbulb, Users, MapPin } from 'lucide-react';
+import { Heart, Home, TreePine, Train, Lightbulb, Users, MapPin, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+
+const allImages = Array.from({ length: 29 }, (_, i) => ({
+  num: i + 1,
+  src: `/about-images/about-image-${i + 1}.jpg`,
+  alt: `Tiny Town photo ${i + 1}`,
+}));
 
 export default function About() {
   const facebookUrl = "https://www.facebook.com/profile.php?id=61568678046515";
-  const instagramUrl = "https://www.instagram.com/tinytownholidayvillage"; // Add Instagram URL if available
+  const instagramUrl = "https://www.instagram.com/tinytownholidayvillage";
+
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const close = useCallback(() => setActiveIndex(null), []);
+  const prev = useCallback(() => setActiveIndex(i => i === null ? null : (i - 1 + allImages.length) % allImages.length), []);
+  const next = useCallback(() => setActiveIndex(i => i === null ? null : (i + 1) % allImages.length), []);
+
+  useEffect(() => {
+    if (activeIndex === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [activeIndex, close, prev, next]);
+
+  const openImage = (num: number) => setActiveIndex(num - 1);
+
+  const imgButton = (num: number, className: string) => (
+    <button
+      key={num}
+      onClick={() => openImage(num)}
+      className={`${className} cursor-zoom-in overflow-hidden rounded-lg focus:outline-none`}
+    >
+      <img
+        src={`/about-images/about-image-${num}.jpg`}
+        alt={`Tiny Town photo ${num}`}
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      />
+    </button>
+  );
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-stone-950 to-stone-900">
@@ -34,14 +74,7 @@ export default function About() {
 
           {/* Image Gallery - Early Days */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <img
-                key={num}
-                src={`/about-images/about-image-${num}.jpg`}
-                alt={`Tiny Town development ${num}`}
-                className="w-full h-48 object-cover rounded-lg border-2 border-yellow-400/30 hover:border-yellow-400 transition-all"
-              />
-            ))}
+            {[1, 2, 3, 4, 5, 6].map((num) => imgButton(num, 'h-48 border-2 border-yellow-400/30 hover:border-yellow-400 transition-colors'))}
           </div>
 
           {/* The Spark Section */}
@@ -86,14 +119,7 @@ export default function About() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              {[7, 8, 9, 10, 11, 12, 13, 14].map((num) => (
-                <img
-                  key={num}
-                  src={`/about-images/about-image-${num}.jpg`}
-                  alt={`Tiny Town build process ${num}`}
-                  className="w-full h-40 object-cover rounded-lg border border-yellow-400/20"
-                />
-              ))}
+              {[7, 8, 9, 10, 11, 12, 13, 14].map((num) => imgButton(num, 'h-40 border border-yellow-400/20'))}
             </div>
             <p className="text-gray-200 leading-relaxed">
               We did away with the black turf and got a black vinyl tarp instead. Moving blankets were laid down as an underlayment of the tarp to give it a better feel when walking on it. The tarp is looking nice. Miniature street lamp posts arrived. The lighted tree took its first string of lights. Artificial turf has arrived, check to see how much detail it adds to the layout. Adding the street lines for added detail and adding to the illusion of a forced perspective, the road narrows farther away giving it that long road illusion.
@@ -193,14 +219,7 @@ export default function About() {
               </ul>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-              {[15, 16, 17, 18, 19, 20, 21, 22, 23].map((num) => (
-                <img
-                  key={num}
-                  src={`/about-images/about-image-${num}.jpg`}
-                  alt={`Tiny Town 2025 ${num}`}
-                  className="w-full h-48 object-cover rounded-lg border border-yellow-400/20"
-                />
-              ))}
+              {[15, 16, 17, 18, 19, 20, 21, 22, 23].map((num) => imgButton(num, 'h-48 border border-yellow-400/20'))}
             </div>
             <p className="text-gray-200 leading-relaxed">
               We also condensed the layout to half the original footprint, making it more intimate and enchanting. The space used this year was the Christmas Tree forest from 2024. The addition of the waterfront with a crossing bridge transformed Tiny Town into a true village experience—kids love crossing the bridge and exploring both sides of the "lake." The railroad will eventually stretch 1,500 feet with multiple train cars and engines, in years to come.
@@ -392,17 +411,53 @@ export default function About() {
 
           {/* Final Images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-            {[24, 25, 26, 27, 28, 29].map((num) => (
-              <img
-                key={num}
-                src={`/about-images/about-image-${num}.jpg`}
-                alt={`Tiny Town magic ${num}`}
-                className="w-full h-48 object-cover rounded-lg border-2 border-yellow-400/30 hover:border-yellow-400 transition-all"
-              />
-            ))}
+            {[24, 25, 26, 27, 28, 29].map((num) => imgButton(num, 'h-48 border-2 border-yellow-400/30 hover:border-yellow-400 transition-colors'))}
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {activeIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={close}
+        >
+          <button
+            onClick={close}
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-10"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={e => { e.stopPropagation(); prev(); }}
+            className="absolute left-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-10"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          <div className="max-w-5xl max-h-[90vh] px-16" onClick={e => e.stopPropagation()}>
+            <img
+              src={allImages[activeIndex].src}
+              alt={allImages[activeIndex].alt}
+              className="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
+            />
+            <p className="text-center text-white/60 text-sm mt-3">
+              {activeIndex + 1} / {allImages.length}
+            </p>
+          </div>
+
+          <button
+            onClick={e => { e.stopPropagation(); next(); }}
+            className="absolute right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-10"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

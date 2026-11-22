@@ -46,17 +46,22 @@ export default function Hero() {
           </h1>
 
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+          <div className="flex flex-row gap-3 justify-center items-center mb-6">
             <a
               href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="inline-flex items-center gap-1.5 px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-sm sm:text-lg sm:px-8 sm:py-4 sm:gap-2 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
               Get Directions
             </a>
-
+            <a
+              href="#about"
+              className="inline-flex items-center gap-1.5 px-5 py-3 bg-green-600 hover:bg-green-700 text-white font-bold text-sm sm:text-lg sm:px-8 sm:py-4 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+            >
+              Learn More
+            </a>
           </div>
 
            <div className="inline-block px-6 py-2 bg-yellow-400/20 backdrop-blur-sm border-2 border-yellow-400 rounded-full">

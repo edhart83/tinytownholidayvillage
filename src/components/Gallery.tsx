@@ -29,8 +29,8 @@ const galleryItems = [
   },
   {
     title: 'Holiday Magic',
-    image: '/tiny_town_holiday_party_invitation.jpg?auto=compress&cs=tinysrgb&w=600',
-    full: '/tiny_town_holiday_party_invitation.jpg',
+    image: '/about-images/about-image-15.jpg?auto=compress&cs=tinysrgb&w=600',
+    full: '/about-images/about-image-15.jpg',
   },
 ];
 
